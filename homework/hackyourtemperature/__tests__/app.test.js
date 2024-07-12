@@ -1,7 +1,5 @@
-import supertest from "supertest";
-import app from "../app.js";
-
-const request = supertest(app);
+const request = require('supertest');
+const app = require('../app'); // Ensure correct path to app.js
 
 describe("POST /weather", () => {
   it("should return 400 if cityName is not provided", async () => {
